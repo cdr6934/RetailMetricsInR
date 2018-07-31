@@ -11,12 +11,14 @@ Retail metrics... I suppose it is something you have to be passionate to write a
 $$
 S_{NET} = \sum{S_{g}-S_{r}}
 $$
+
 One of the fundamental metrics to navigate the success and growth of any organization is the Net Sales. It is the overall amount of Revenue metric. 
 
 ## Year over Year Growth 
 $$
 S_{YOY} = \frac{S_{net_{TY}}-S_{net_{LY}}}{S_{net_{LY}}}
 $$
+
 YOY comparision of sales shed light in the growth of the company. Some of these factors include: 
 
 * **Product Mix**: there is alot of science in this, but having the right product for your store is extremely important. But having even more "right" product for your customers will increase their frequency to buy. On the flip side, you will see a negative growth if your customers do not find the right product. This will eventually frustrate them to not return, and its only new customers that will bring back more people. 
@@ -38,18 +40,30 @@ The return rate is used as a measure of the product that is returned to the stor
 * **demographic shifts**: Less frequent, but possible it can be found that as more individuals move out of an area; there might be a change in the philosophy and ethics in returning items to a particular store. 
 
 
-## Average Transactions 
+## Average Units Per Transactions 
 $$
 Average\ Transactions = \frac{Units\ Sold}{Transactions}
 $$
+The average transaction size is indicative of how many units the average customer buys. This metric is very similar to the   The increase or decrease of the average transactions depends
+
+* **Quality of Product**
+
 
 ## Weeks of Supply 
 $$
 WOS = \frac{Store\ Inventory}{Week\ Gross\ Sales}
 $$
-
+We can have WOS which will give us the ability to monitor the amount of product inside a store and how lng it might take to sell through the entire product. 
 
 ## Basket Size
 $$
 Basket\ Size = \frac{Gross\ Sales}{Units\ Sold}
 $$
+
+
+
+## Sell-Thru Rate 
+```{r}
+
+```
+

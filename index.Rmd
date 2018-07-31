@@ -12,7 +12,12 @@ description: "The following book using R to expound on the influences and challe
 
 # Prerequisites
 
-The following book takes into consideration that you have some familiarity with R and have had some sort of experience in retail. However this has been written to be practical; rather than very theoretical in order for the practicing novice to pick up and complete their own analysis of retail data.
+The following book takes into consideration that you have:
+
+* familiarity with R 
+* Domain knowledge in retail
+
+However this has been written to be practical; rather than  theoretical so that the practicing novice can pick this up and complete their own analysis of retail data.
 
 ```{r eval=FALSE}
 install.packages("bookdown")
@@ -20,9 +25,6 @@ install.packages("bookdown")
 # devtools::install_github("rstudio/bookdown")
 ```
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
-
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.name/tinytex/>.
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
