@@ -1,0 +1,431 @@
+\documentclass[]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Retail Metrics in R},
+            pdfauthor={Christopher Ried},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Retail Metrics in R}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Christopher Ried}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{2018-07-30}
+
+\usepackage{booktabs}
+
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{prerequisites}{%
+\chapter{Prerequisites}\label{prerequisites}}
+
+The following book takes into consideration that you have some
+familiarity with R and have had some sort of experience in retail.
+However this has been written to be practical; rather than very
+theoretical in order for the practicing novice to pick up and complete
+their own analysis of retail data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{)}
+\CommentTok{# or the development version}
+\CommentTok{# devtools::install_github("rstudio/bookdown")}
+\end{Highlighting}
+\end{Shaded}
+
+Remember each Rmd file contains one and only one chapter, and a chapter
+is defined by the first-level heading \texttt{\#}.
+
+To compile this example to PDF, you need XeLaTeX. You are recommended to
+install TinyTeX (which includes XeLaTeX):
+\url{https://yihui.name/tinytex/}.
+
+\hypertarget{intro}{%
+\chapter{Introduction}\label{intro}}
+
+\hypertarget{purpose}{%
+\section{Purpose}\label{purpose}}
+
+The following book gives the retail data analyst or scientist the core
+skillset in order to be able to pivot.
+
+The disruption of retail continues to speed up creating an environment
+that is feared by the largest of companies and tends to be run by a few
+at the top (i.e.~Amazon, Walmart). Thus there are a few advantages one
+needs to take in this climate. Data and speed.
+
+\hypertarget{data}{%
+\subsection{Data}\label{data}}
+
+There are so many ways to monitor data within a store. Anything from
+simple traffic counters, to the complexity of an Amazon Go store. Thus
+it is imperitive to start collecting as much data as you can. It is not
+in your interest to try to collect some; rather collect more than you
+can get. Your future self will be quite thankful.
+
+\hypertarget{speed}{%
+\subsection{Speed}\label{speed}}
+
+And as retail becomes more competitive, it is important to quickly pivot
+and be able to make change based upon the climate of your users. They
+will want you to provide them experiences that are unique and special.
+It can make and break them. Thu speed in data also is important. It
+needs to be \textbf{accessable} to everyone who can use it; and you will
+need to \textbf{talent} to be able to address these analysis quicker
+than the rest of them.
+
+\hypertarget{retail-overview}{%
+\chapter{Retail Overview}\label{retail-overview}}
+
+Retail metrics\ldots{} I suppose it is something you have to be
+passionate to write about. Or really miserable to try to pinpoint the
+common methodologies by which one is able to manage a store. However it
+is important to understand the way it works in ordeer to be able to give
+one's best attention to the work.
+
+\begin{itemize}
+\tightlist
+\item
+  Total Gross Sales \(S_G\) / Gross Sales \(S_g\)
+\item
+  Returns \(S_r\)
+\end{itemize}
+
+\hypertarget{total-net-sales}{%
+\section{Total Net Sales}\label{total-net-sales}}
+
+\[
+S_{NET} = \sum{S_{g}-S_{r}}
+\] One of the fundamental metrics to navigate the success and growth of
+any organization is the Net Sales. It is the overall amount of Revenue
+metric.
+
+\hypertarget{year-over-year-growth}{%
+\section{Year over Year Growth}\label{year-over-year-growth}}
+
+\[
+S_{YOY} = \frac{S_{net_{TY}}-S_{net_{LY}}}{S_{net_{LY}}}
+\] YOY comparision of sales shed light in the growth of the company.
+Some of these factors include:
+
+\begin{itemize}
+\item
+  \textbf{Product Mix}: there is alot of science in this, but having the
+  right product for your store is extremely important. But having even
+  more ``right'' product for your customers will increase their
+  frequency to buy. On the flip side, you will see a negative growth if
+  your customers do not find the right product. This will eventually
+  frustrate them to not return, and its only new customers that will
+  bring back more people.
+\item
+  \textbf{New Customers}: Especially when the store is brand new, it can
+  take some time for your customers to find your store. But as the word
+  spreads about the store, they find themselves to at least check your
+  store.
+\item
+  \textbf{Repeat Customers}: Not all, but a percentage of customers, if
+  they find value in coming again, they will continue to come to your
+  same store. That way the growth continues to be level giving new
+  repeat customers the basis to grow.
+\end{itemize}
+
+\hypertarget{return-rate}{%
+\section{Return Rate}\label{return-rate}}
+
+\[
+\%\ Return\ Rate = \frac{S_g}{S_r}
+\]
+
+The return rate is used as a measure of the product that is returned to
+the store by the customer in comparision to what has been sold out of
+the same store. This metric, as it changes, can indicate a number of
+influencing factors such as follows
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Quality of product}: If the product source has changed; or the
+  material of the product has changed and has left the customer less
+  satisified with the product, generally you will see the return rate
+  increase.
+\item
+  \textbf{shrinkage of product}: As one of the metrics that can be used
+  to signal deviant behavior by a single store or a particular
+  individual when compared to the rest of the store.
+\item
+  \textbf{demographic shifts}: Less frequent, but possible it can be
+  found that as more individuals move out of an area; there might be a
+  change in the philosophy and ethics in returning items to a particular
+  store.
+\end{itemize}
+
+\hypertarget{average-transactions}{%
+\section{Average Transactions}\label{average-transactions}}
+
+\[
+Average\ Transactions = \frac{Units\ Sold}{Transactions}
+\]
+
+\hypertarget{weeks-of-supply}{%
+\section{Weeks of Supply}\label{weeks-of-supply}}
+
+\[
+WOS = \frac{Store\ Inventory}{Week\ Gross\ Sales}
+\]
+
+\hypertarget{basket-size}{%
+\section{Basket Size}\label{basket-size}}
+
+\[
+Basket\ Size = \frac{Gross\ Sales}{Units\ Sold}
+\]
+
+\hypertarget{forecasting}{%
+\chapter{Forecasting}\label{forecasting}}
+
+Again this could be an entire book just on forecasting
+
+\hypertarget{store-sales}{%
+\section{Store Sales}\label{store-sales}}
+
+In order to project the years sales; there are a
+
+\hypertarget{labor-demand}{%
+\section{Labor Demand}\label{labor-demand}}
+
+\hypertarget{simulations}{%
+\chapter{Simulations}\label{simulations}}
+
+Being able to take the information that we already know and use it to
+determine alternative outcomes in an unknown circumstance.
+
+\hypertarget{monte-carlo}{%
+\section{Monte Carlo}\label{monte-carlo}}
+
+This recursive algorithm has been around for some time now; but it
+continues to be the core of many simulatory methodologies.
+
+\hypertarget{gausian-mixed-models-gmm}{%
+\section{Gausian Mixed Models (GMM)}\label{gausian-mixed-models-gmm}}
+
+\hypertarget{profit-loss-statement}{%
+\chapter{Profit / Loss Statement}\label{profit-loss-statement}}
+
+From the financial point of view; this is one of the most important
+driving mechanisms to be able to manage the expenses of a store. It
+gives the decision make the ability to better their overall profit
+margins within the stores.
+
+\hypertarget{product-allocation}{%
+\chapter{Product Allocation}\label{product-allocation}}
+
+Product allocation essentially tries to fulfill the need of a certain
+product in a store. This can be based off a number of different drivers;
+however some of the most important are WOS.
+
+\[
+WOS = \frac{C_i}{\bar{x}_{ws}}
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(C_i\) - Current Inventory
+\item
+  \(\bar{x}_ws\) - Weekly Sales
+\end{itemize}
+
+\hypertarget{regression-analysis}{%
+\chapter{Regression Analysis}\label{regression-analysis}}
+
+It is important to understand how multiple factors (or variables) relate
+to one another within a dataset. Take for example the following
+marketing dataset.
+
+\hypertarget{outlier-analysis}{%
+\chapter{Outlier Analysis}\label{outlier-analysis}}
+
+Specifically from a Loss Pervention perspective; using different forms
+of outlier analysis will help understand deviant behavior and helps
+identify.
+
+\hypertarget{z-score}{%
+\section{Z-Score}\label{z-score}}
+
+\hypertarget{bayesian-outlier-analysis}{%
+\section{Bayesian Outlier Analysis}\label{bayesian-outlier-analysis}}
+
+\hypertarget{classification}{%
+\chapter{Classification}\label{classification}}
+
+There are many uses of classification in the retail space. Some of these
+can be difficult to understand as they might have unintended effects
+upon each other. The following methods will help identify these issues.
+
+\hypertarget{customer-segmentation}{%
+\section{Customer Segmentation}\label{customer-segmentation}}
+
+\hypertarget{product-types}{%
+\section{Product Types}\label{product-types}}
+
+\hypertarget{complementary-products}{%
+\section{Complementary Products}\label{complementary-products}}
+
+\hypertarget{pricing-optimization}{%
+\chapter{Pricing Optimization}\label{pricing-optimization}}
+
+Pricing is important to both the Seller and Buyer; creating a situation
+in which you try to find the maximum benefit for both the user and
+seller.
+
+\hypertarget{demand-curves}{%
+\section{Demand Curves}\label{demand-curves}}
+
+Finding an optimum can be done by running a couple simple AB Tests to be
+able to find the Minimum / Maximum optimzation.
+
+\hypertarget{final-words}{%
+\chapter{Final Words}\label{final-words}}
+
+Thank you for making it to the end of this book. It has been a fun
+adventure trying to come up with a simple but comprehensive analysis of
+retail metrics.
+
+\bibliography{book.bib,packages.bib}
+
+
+\end{document}
