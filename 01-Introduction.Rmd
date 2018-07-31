@@ -1,0 +1,12 @@
+# Introduction {#intro}
+
+## Purpose 
+The following book gives the retail data analyst or scientist the core skillset in order to be able to pivot. 
+
+The disruption of retail continues to speed up creating an environment that is feared by the largest of companies and tends to be run by a few at the top (i.e. Amazon, Walmart). Thus there are a few advantages one needs to take in this climate. Data and speed. 
+
+### Data
+There are so many ways to monitor data within a store. Anything from simple traffic counters, to the complexity of an Amazon Go store. Thus it is imperitive to start collecting as much data as you can. It is not in your interest to try to collect some; rather collect more than you can get. Your future self will be quite thankful. 
+
+### Speed 
+And as retail becomes more competitive, it is important to quickly pivot and be able to make change based upon the climate of your users. They will want you to provide them experiences that are unique and special. It can make and break them. Thu speed in data also is important. It needs to be **accessable** to everyone who can use it; and you will need to **talent** to be able to address these analysis quicker than the rest of them.

@@ -1,0 +1,10 @@
+# Product Allocation 
+
+Product allocation essentially tries to fulfill the need of a certain product in a store. This can be based off a number of different drivers; however some of the most important are WOS. 
+
+$$
+WOS = \frac{C_i}{\bar{x}_{ws}}
+$$
+
+* $C_i$ - Current Inventory 
+* $\bar{x}_ws$ - Weekly Sales

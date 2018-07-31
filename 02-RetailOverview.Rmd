@@ -1,0 +1,55 @@
+# Retail Overview 
+
+Retail metrics... I suppose it is something you have to be passionate to write about. Or really miserable to try to pinpoint the common methodologies by which one is able to manage a store. However it is important to understand the way it works in ordeer to be able to give one's best attention to the work. 
+
+
+* Total Gross Sales $S_G$ / Gross Sales $S_g$
+* Returns $S_r$
+
+
+## Total Net Sales 
+$$
+S_{NET} = \sum{S_{g}-S_{r}}
+$$
+One of the fundamental metrics to navigate the success and growth of any organization is the Net Sales. It is the overall amount of Revenue metric. 
+
+## Year over Year Growth 
+$$
+S_{YOY} = \frac{S_{net_{TY}}-S_{net_{LY}}}{S_{net_{LY}}}
+$$
+YOY comparision of sales shed light in the growth of the company. Some of these factors include: 
+
+* **Product Mix**: there is alot of science in this, but having the right product for your store is extremely important. But having even more "right" product for your customers will increase their frequency to buy. On the flip side, you will see a negative growth if your customers do not find the right product. This will eventually frustrate them to not return, and its only new customers that will bring back more people. 
+
+* **New Customers**: Especially when the store is brand new, it can take some time for your customers to find your store. But as the word spreads about the store, they find themselves to at least check your store. 
+
+* **Repeat Customers**: Not all, but a percentage of customers, if they find value in coming again, they will continue to come to your same store. That way the growth continues to be level giving new repeat customers the basis to grow. 
+
+
+## Return Rate
+$$
+\%\ Return\ Rate = \frac{S_g}{S_r}
+$$
+
+The return rate is used as a measure of the product that is returned to the store by the customer in comparision to what has been sold out of the same store. This metric, as it changes, can indicate a number of influencing factors such as follows
+
+* **Quality of product**: If the product source has changed; or the material of the product has changed and has left the customer less satisified with the product, generally you will see the return rate increase. 
+* **shrinkage of product**: As one of the metrics that can be used to signal deviant behavior by a single store or a particular individual when compared to the rest of the store.
+* **demographic shifts**: Less frequent, but possible it can be found that as more individuals move out of an area; there might be a change in the philosophy and ethics in returning items to a particular store. 
+
+
+## Average Transactions 
+$$
+Average\ Transactions = \frac{Units\ Sold}{Transactions}
+$$
+
+## Weeks of Supply 
+$$
+WOS = \frac{Store\ Inventory}{Week\ Gross\ Sales}
+$$
+
+
+## Basket Size
+$$
+Basket\ Size = \frac{Gross\ Sales}{Units\ Sold}
+$$

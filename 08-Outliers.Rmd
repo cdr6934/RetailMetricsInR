@@ -1,0 +1,13 @@
+
+# Outlier Analysis
+
+Specifically from a Loss Pervention perspective; using different forms of outlier analysis will help understand deviant behavior and helps identify. 
+
+
+
+## Z-Score 
+
+
+
+
+## Bayesian Outlier Analysis 

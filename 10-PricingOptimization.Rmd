@@ -1,0 +1,6 @@
+# Pricing Optimization
+
+Pricing is important to both the Seller and Buyer; creating a situation in which you try to find the maximum benefit for both the user and seller. 
+
+## Demand Curves
+Finding an optimum can be done by running a couple simple AB Tests to be able to find the Minimum / Maximum optimzation. 

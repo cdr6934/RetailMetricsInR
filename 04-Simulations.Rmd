@@ -1,0 +1,9 @@
+# Simulations
+
+Being able to take the information that we already know and use it to determine alternative outcomes in an unknown circumstance. 
+
+
+## Monte Carlo 
+This recursive algorithm has been around for some time now; but it continues to be the core of many simulatory methodologies. 
+
+## Gausian Mixed Models (GMM)

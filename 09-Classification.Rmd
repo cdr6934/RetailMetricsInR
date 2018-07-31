@@ -1,0 +1,10 @@
+# Classification 
+
+There are many uses of classification in the retail space. Some of these can be difficult to understand as they might have unintended effects upon each other. The following methods will help identify these issues. 
+
+
+## Customer Segmentation 
+
+## Product Types
+
+## Complementary Products 

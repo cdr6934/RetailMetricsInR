@@ -1,0 +1,8 @@
+# Regression Analysis 
+
+It is important to understand how multiple factors (or variables) relate to one another within a dataset. Take for example the following marketing dataset. 
+
+```{r}
+
+```
+
