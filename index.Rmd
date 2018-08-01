@@ -14,8 +14,10 @@ description: "The following book using R to expound on the influences and challe
 
 The following book takes into consideration that you have:
 
+* Interest in learning new things 
 * familiarity with R 
 * Domain knowledge in retail
+
 
 However this has been written to be practical; rather than  theoretical so that the practicing novice can pick this up and complete their own analysis of retail data.
 
