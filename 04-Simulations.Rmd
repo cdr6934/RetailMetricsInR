@@ -6,4 +6,4 @@ Being able to take the information that we already know and use it to determine 
 ## Monte Carlo 
 This recursive algorithm has been around for some time now; but it continues to be the core of many simulatory methodologies. 
 
-## Gausian Mixed Models (GMM)
+## Gaussian Mixed Models (GMM)
