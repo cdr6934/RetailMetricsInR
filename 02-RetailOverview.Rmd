@@ -61,6 +61,11 @@ Basket\ Size = \frac{Gross\ Sales}{Units\ Sold}
 $$
 
 
+## Markdown Percent
+$$
+Markdown = 1 - (\frac{Gross\ Sale}{Total\ Retail\ Value} )
+$$
+
 
 ## Sell-Thru Rate 
 ```{r}
