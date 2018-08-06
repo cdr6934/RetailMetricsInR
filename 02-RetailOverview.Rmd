@@ -68,7 +68,6 @@ $$
 
 
 ## Sell-Thru Rate 
-```{r}
-
-```
-
+$$
+Summary=\frac{Current\ Inventory}{Sales} 
+$$
