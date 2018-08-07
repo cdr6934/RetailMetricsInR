@@ -67,7 +67,10 @@ Markdown = 1 - (\frac{Gross\ Sale}{Total\ Retail\ Value} )
 $$
 
 
-## Sell-Thru Rate 
+## Sell-Thru 
+Following sell thru rate shows or determines how much inventory has been sold. This is a measure of how much of the stock is left over. 
 $$
-Summary=\frac{Current\ Inventory}{Sales} 
+Sell\ Thru=\frac{Current_\ Inventory_{date}}{Sales_{date}} 
 $$
+
+## Inventory Turns 

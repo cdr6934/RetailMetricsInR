@@ -1,6 +1,6 @@
 # Forecasting
 
-Again this could be an entire book just on forecasting
+Again this could be an entire book just on forecasting but the following chapter will run down an example in which a forecast is made to better advice the outcomes of a particular buy. 
 
 ## Store Sales
 In order to project the years sales; there are a 
