@@ -70,7 +70,11 @@ $$
 ## Sell-Thru 
 Following sell thru rate shows or determines how much inventory has been sold. This is a measure of how much of the stock is left over. 
 $$
-Sell\ Thru=\frac{Current_\ Inventory_{date}}{Sales_{date}} 
+Sell\ Thru=\frac{Current_\ Inventory_{d}}{Sales_{d}} 
 $$
 
 ## Inventory Turns 
+Turn is a ratio of sales to inventory for a period of time (usually a season or year)
+$$
+Turn = \frac{Sales}{Inventory}
+$$
