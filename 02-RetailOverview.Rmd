@@ -63,7 +63,7 @@ $$
 
 ## Markdown Percent
 $$
-Markdown = 1 - (\frac{Gross\ Sale}{Total\ Retail\ Value} )
+Markdown\ Percent = 1 - (\frac{Gross\ Sale}{Total\ Retail\ Value} )
 $$
 
 
@@ -76,5 +76,8 @@ $$
 ## Inventory Turns 
 Turn is a ratio of sales to inventory for a period of time (usually a season or year)
 $$
-Turn = \frac{Sales}{Inventory}
+Turn = \frac{Sales}{Current\ Inventory_{d}}
 $$
+
+## Examples 
+1. 

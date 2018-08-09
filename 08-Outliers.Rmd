@@ -11,3 +11,9 @@ Specifically from a Loss Pervention perspective; using different forms of outlie
 
 
 ## Bayesian Outlier Analysis 
+
+
+
+## References 
+
+* ()[]
