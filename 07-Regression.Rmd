@@ -8,3 +8,4 @@ Take for example the following marketing dataset.
 
 ```
 
+## References 

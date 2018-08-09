@@ -18,3 +18,9 @@ In order to project the years sales; there are a
 ### ARIMA
 
 ### Bayesian Inference
+
+
+## References 
+
+* [Inventory Planning Methodlogies](http://www.parkeravery.com/pov_InventoryPlanningMethods.html)
+* [Retail Lectures](http://www2.unb.ca/~ddu/4690/Lecture_notes/Lec2.pdf)

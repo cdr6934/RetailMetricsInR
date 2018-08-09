@@ -25,7 +25,7 @@
 <meta name="author" content="Christopher Ried">
 
 
-<meta name="date" content="2018-08-08">
+<meta name="date" content="2018-08-09">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -83,10 +83,19 @@
 <li class="chapter" data-level="3.7" data-path="retail-overview.html"><a href="retail-overview.html#markdown-percent"><i class="fa fa-check"></i><b>3.7</b> Markdown Percent</a></li>
 <li class="chapter" data-level="3.8" data-path="retail-overview.html"><a href="retail-overview.html#sell-thru"><i class="fa fa-check"></i><b>3.8</b> Sell-Thru</a></li>
 <li class="chapter" data-level="3.9" data-path="retail-overview.html"><a href="retail-overview.html#inventory-turns"><i class="fa fa-check"></i><b>3.9</b> Inventory Turns</a></li>
+<li class="chapter" data-level="3.10" data-path="retail-overview.html"><a href="retail-overview.html#examples"><i class="fa fa-check"></i><b>3.10</b> Examples</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="forecasting.html"><a href="forecasting.html"><i class="fa fa-check"></i><b>4</b> Forecasting</a><ul>
-<li class="chapter" data-level="4.1" data-path="forecasting.html"><a href="forecasting.html#store-sales"><i class="fa fa-check"></i><b>4.1</b> Store Sales</a></li>
-<li class="chapter" data-level="4.2" data-path="forecasting.html"><a href="forecasting.html#labor-demand"><i class="fa fa-check"></i><b>4.2</b> Labor Demand</a></li>
+<li class="chapter" data-level="4.1" data-path="forecasting.html"><a href="forecasting.html#examples-of-forecasting"><i class="fa fa-check"></i><b>4.1</b> Examples of Forecasting</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="forecasting.html"><a href="forecasting.html#store-sales"><i class="fa fa-check"></i><b>4.1.1</b> Store Sales</a></li>
+<li class="chapter" data-level="4.1.2" data-path="forecasting.html"><a href="forecasting.html#labor-demand"><i class="fa fa-check"></i><b>4.1.2</b> Labor Demand</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="forecasting.html"><a href="forecasting.html#forecasting-methodologies"><i class="fa fa-check"></i><b>4.2</b> Forecasting Methodologies</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="forecasting.html"><a href="forecasting.html#sales-plan-looking-foreward"><i class="fa fa-check"></i><b>4.2.1</b> Sales Plan (Looking foreward)</a></li>
+<li class="chapter" data-level="4.2.2" data-path="forecasting.html"><a href="forecasting.html#arima"><i class="fa fa-check"></i><b>4.2.2</b> ARIMA</a></li>
+<li class="chapter" data-level="4.2.3" data-path="forecasting.html"><a href="forecasting.html#bayesian-inference"><i class="fa fa-check"></i><b>4.2.3</b> Bayesian Inference</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="forecasting.html"><a href="forecasting.html#references"><i class="fa fa-check"></i><b>4.3</b> References</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="simulations.html"><a href="simulations.html"><i class="fa fa-check"></i><b>5</b> Simulations</a><ul>
 <li class="chapter" data-level="5.1" data-path="simulations.html"><a href="simulations.html#monte-carlo"><i class="fa fa-check"></i><b>5.1</b> Monte Carlo</a></li>
@@ -98,6 +107,7 @@
 <li class="chapter" data-level="9" data-path="outlier-analysis.html"><a href="outlier-analysis.html"><i class="fa fa-check"></i><b>9</b> Outlier Analysis</a><ul>
 <li class="chapter" data-level="9.1" data-path="outlier-analysis.html"><a href="outlier-analysis.html#z-score"><i class="fa fa-check"></i><b>9.1</b> Z-Score</a></li>
 <li class="chapter" data-level="9.2" data-path="outlier-analysis.html"><a href="outlier-analysis.html#bayesian-outlier-analysis"><i class="fa fa-check"></i><b>9.2</b> Bayesian Outlier Analysis</a></li>
+<li class="chapter" data-level="9.3" data-path="outlier-analysis.html"><a href="outlier-analysis.html#references-1"><i class="fa fa-check"></i><b>9.3</b> References</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="classification.html"><a href="classification.html"><i class="fa fa-check"></i><b>10</b> Classification</a><ul>
 <li class="chapter" data-level="10.1" data-path="classification.html"><a href="classification.html#customer-segmentation"><i class="fa fa-check"></i><b>10.1</b> Customer Segmentation</a></li>
@@ -108,7 +118,7 @@
 <li class="chapter" data-level="11.1" data-path="pricing-optimization.html"><a href="pricing-optimization.html#demand-curves"><i class="fa fa-check"></i><b>11.1</b> Demand Curves</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>12</b> Final Words</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="references-2.html"><a href="references-2.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -132,12 +142,35 @@
 <div id="forecasting" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Forecasting</h1>
 <p>Again this could be an entire book just on forecasting but the following chapter will run down an example in which a forecast is made to better advice the outcomes of a particular buy.</p>
-<div id="store-sales" class="section level2">
-<h2><span class="header-section-number">4.1</span> Store Sales</h2>
+<div id="examples-of-forecasting" class="section level2">
+<h2><span class="header-section-number">4.1</span> Examples of Forecasting</h2>
+<div id="store-sales" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Store Sales</h3>
 <p>In order to project the years sales; there are a</p>
 </div>
-<div id="labor-demand" class="section level2">
-<h2><span class="header-section-number">4.2</span> Labor Demand</h2>
+<div id="labor-demand" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Labor Demand</h3>
+</div>
+</div>
+<div id="forecasting-methodologies" class="section level2">
+<h2><span class="header-section-number">4.2</span> Forecasting Methodologies</h2>
+<div id="sales-plan-looking-foreward" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Sales Plan (Looking foreward)</h3>
+</div>
+<div id="arima" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> ARIMA</h3>
+</div>
+<div id="bayesian-inference" class="section level3">
+<h3><span class="header-section-number">4.2.3</span> Bayesian Inference</h3>
+</div>
+</div>
+<div id="references" class="section level2">
+<h2><span class="header-section-number">4.3</span> References</h2>
+<ul>
+<li><a href="http://www.parkeravery.com/pov_InventoryPlanningMethods.html">Inventory Planning Methodlogies</a></li>
+<li><a href="http://www2.unb.ca/~ddu/4690/Lecture_notes/Lec2.pdf" class="uri">http://www2.unb.ca/~ddu/4690/Lecture_notes/Lec2.pdf</a></li>
+<li><a href="http://www.theshopfiles.com/retail-math-101/" class="uri">http://www.theshopfiles.com/retail-math-101/</a></li>
+</ul>
 
 </div>
 </div>

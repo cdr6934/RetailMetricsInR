@@ -8,3 +8,6 @@ $$
 
 * $C_i$ - Current Inventory 
 * $\bar{x}_ws$ - Weekly Sales
+
+# References 
+* [Essentials of Supply Chain Management](https://www.amazon.com/Essentials-Supply-Chain-Management-ebook/dp/B07B4N77VQ/ref=sr_1_3?ie=UTF8&qid=1533817975&sr=8-3&keywords=essentials+of+supply+chain+management+by+michael+h.+hugos)

@@ -9,3 +9,5 @@ This recursive algorithm has been around for some time now; but it continues to 
 ## Gaussian Mixed Models (GMM)
 The following mixture model takes into consideration... 
 > TODO: I need to use the following: http://tinyheero.github.io/2016/01/03/gmm-em.html
+
+# References 
