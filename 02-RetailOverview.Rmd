@@ -12,6 +12,15 @@ $$
 S_{NET} = \sum{S_{g}-S_{r}}
 $$
 
+```{r}
+NetSales <- function(GrossSales, Returns)
+{
+  GrossSales - Returns #TODO: Check for proper type 
+}
+```
+
+
+
 One of the fundamental metrics to navigate the success and growth of any organization is the Net Sales. It is the overall amount of Revenue metric. 
 
 ## Year over Year Growth 
@@ -32,6 +41,14 @@ YOY comparision of sales shed light in the growth of the company. Some of these 
 $$
 \%\ Return\ Rate = \frac{S_g}{S_r}
 $$
+```{r}
+ReturnRate <- function(GrossSales, Returns)
+{
+  GrossSales / Returns
+}
+```
+
+
 
 The return rate is used as a measure of the product that is returned to the store by the customer in comparision to what has been sold out of the same store. This metric, as it changes, can indicate a number of influencing factors such as follows
 
