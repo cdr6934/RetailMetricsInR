@@ -100,5 +100,4 @@ $$
 1. 
 
 ## References
-
 * [Retail Mathematics](http://www.theshopfiles.com/retail-math-101/)
