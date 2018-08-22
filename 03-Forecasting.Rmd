@@ -10,6 +10,13 @@ In order to project the years sales; there are a
 ### Labor Demand
 
 
+### Demand Forecasting
+
+```{r}
+library(prophet)
+```
+
+
 ## Forecasting Methodologies 
 
 ### Sales Plan (Looking foreward)
