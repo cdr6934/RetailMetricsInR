@@ -5,7 +5,7 @@ Again this could be an entire book just on forecasting but the following chapter
 ## Examples of Forecasting
 
 ### Store Sales
-In order to project the years sales; there are a 
+In order to project the years sales; there are a number of
 
 ### Labor Demand
 
@@ -14,6 +14,9 @@ In order to project the years sales; there are a
 
 ```{r}
 library(prophet)
+
+x <- c(1,2,3)
+
 ```
 
 
